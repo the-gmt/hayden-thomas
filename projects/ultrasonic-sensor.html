@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ultrasonic Distance Sensor — Hayden Thomas</title>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta name="description" content="Designed and built a modular ultrasonic range detector achieving 1 cm accuracy over 10–100 cm, using op-amp amplification, 555 timer clocks, Schmitt triggers, and BCD counter display logic.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav id="nav">
+  <a href="../index.html" class="nav-logo">H<span>.</span>T</a>
+  <ul class="nav-links-desktop">
+    <li><a href="../index.html#about">About</a></li>
+    <li><a href="../index.html#projects">Projects</a></li>
+    <li><a href="../index.html#experience">Experience</a></li>
+    <li><a href="../index.html#skills">Skills</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+    <li><a href="../assets/Hayden-Thomas-Resume.pdf" class="nav-resume-btn" download>
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Resume
+    </a></li>
+  </ul>
+  <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <div class="mobile-menu-inner">
+    <a href="../index.html#about" class="mobile-menu-link">About</a>
+    <a href="../index.html#projects" class="mobile-menu-link">Projects</a>
+    <a href="../index.html#experience" class="mobile-menu-link">Experience</a>
+    <a href="../index.html#skills" class="mobile-menu-link">Skills</a>
+    <a href="../index.html#contact" class="mobile-menu-link">Contact</a>
+    <a href="../assets/Hayden-Thomas-Resume.pdf" class="mobile-menu-resume" download>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download Resume
+    </a>
+  </div>
+</div>
+
+<div class="project-hero">
+  <a href="../index.html#projects" class="project-hero-back">← Back to Projects</a>
+  <div class="project-hero-tags">
+    <span class="project-tag">Op-Amps</span>
+    <span class="project-tag">555 Timers</span>
+    <span class="project-tag">Signal Processing</span>
+    <span class="project-tag">Analog Design</span>
+  </div>
+  <h1 class="project-hero-title">Ultrasonic Range<br>Detector</h1>
+  <p class="project-hero-summary">Designed and built a complete ultrasonic distance measurement system from discrete analog and digital components — transmitter, multi-stage amplifier, Schmitt trigger, and BCD counter display — achieving 1 cm accuracy across a 10–100 cm range with real-time 7-segment readout.</p>
+</div>
+
+<div class="section-divider"></div>
+
+<div class="project-detail-content">
+  <div class="project-detail-grid">
+    <div class="project-body">
+
+      <div class="project-gallery">
+        <div class="project-gallery-grid">
+          <div class="project-gallery-item" data-src="ultrasonic_hero.png" data-alt="Completed ultrasonic range detector circuit">
+            <img src="ultrasonic_hero.png" alt="Completed ultrasonic range detector circuit">
+          </div>
+          <div class="project-gallery-item" data-src="ultrasonic_transducer.png" data-alt="HC-SR04 ultrasonic transducer">
+            <img src="ultrasonic_transducer.png" alt="HC-SR04 ultrasonic transducer">
+          </div>
+          <div class="project-gallery-item" data-src="ultrasonic_display.png" data-alt="7-segment display showing distance reading">
+            <img src="ultrasonic_display.png" alt="7-segment display showing distance reading">
+          </div>
+        </div>
+      </div>
+
+      <h2>The Challenge</h2>
+      <p>Build a range detector from scratch using only discrete analog and digital components — no microcontrollers, no pre-built sensor modules. The circuit must measure distances from 10 cm to 1 meter with accuracy within 1 cm, and display the result in real-time on a two-digit 7-segment display.</p>
+
+      <h2>Three-Module Architecture</h2>
+      <p>The system was designed as three interconnected modules, each solving a distinct signal processing problem:</p>
+      <ul>
+        <li>Transmitter module — two 555 timers (1 Hz gating clock and 40.6 kHz carrier) ANDed together to produce modulated ultrasonic bursts, preventing signal overlap between transmission and reception cycles</li>
+        <li>Receiver module — a two-stage inverting amplifier (gain of 272×) to boost the millivolt-scale echo signal, followed by an inverting Schmitt trigger to convert the amplified analog signal into a clean digital pulse</li>
+        <li>Display module — a 17.5 kHz master clock driving BCD counters gated by an SR latch, with binary-to-7-segment decoders for the tens and ones digits</li>
+      </ul>
+
+      <h2>Signal Chain Design</h2>
+      <p>The transducer's optimal frequency was determined experimentally at 40.6 kHz using an oscilloscope and frequency sweep. The echo signal arrives at only 6–9 mV peak — far too small for digital logic. The two-stage amplifier uses LM358 op-amps, each at a gain of 16.5× (chosen just below the 17.2× gain-bandwidth limit at 40.6 kHz to maintain stability), producing a combined gain of 285× — enough to drive the Schmitt trigger reliably.</p>
+      <p>The distance calculation relies on the speed of sound: each centimeter of range corresponds to a time delay of approximately 1/17,150 seconds. A 17.5 kHz master clock drives BCD counters that start counting when the transmit burst fires and stop when the Schmitt trigger detects the echo. The counter value at stop directly represents the distance in centimeters.</p>
+
+      <div class="project-gallery">
+        <div class="project-gallery-grid">
+          <div class="project-gallery-item" data-src="ultrasonic_oscilloscope.jpg" data-alt="Oscilloscope waveforms showing amplification stages">
+            <img src="ultrasonic_oscilloscope.jpg" alt="Oscilloscope waveforms showing amplification stages">
+          </div>
+          <div class="project-gallery-item" data-src="ultrasonic_schematic.jpg" data-alt="Complete circuit schematic">
+            <img src="ultrasonic_schematic.jpg" alt="Complete circuit schematic">
+          </div>
+        </div>
+      </div>
+
+      <h2>Lab Implementation</h2>
+      <p>The entire circuit was constructed on breadboards using discrete components: TLC555 timers, LM358 op-amps, an LM311 comparator (Schmitt trigger), 74HC451 BCD counters, 74HC32 NOR gates (SR latch), 74HC04 NOT gates, and 4511 BCD-to-7-segment decoders. Each module was built and verified independently using oscilloscope measurements before integration.</p>
+      <p>Component tolerances required adjustment from theoretical values — the 1 Hz clock used a 235 µF capacitor (vs. calculated 266 µF) achieving 1.17 Hz, while the 17.5 kHz clock used 17.2 nF achieving 17.52 kHz. These discrepancies were traced to parasitic capacitance in the breadboard rails and were compensated empirically.</p>
+
+      <h2>Outcome</h2>
+      <p>The completed circuit accurately measures distances within 1 cm of true value across the full 10–100 cm range, displaying results in real time on the dual 7-segment display. The project demonstrates end-to-end analog and digital circuit design: signal generation, multi-stage amplification, analog-to-digital conversion, timing logic, and display driving — all from discrete components.</p>
+
+    </div>
+
+    <div>
+      <div class="project-sidebar-card">
+        <div class="project-sidebar-title">Project Details</div>
+        <div class="project-sidebar-item">
+          <div class="project-sidebar-label">Context</div>
+          <div class="project-sidebar-value">McMaster University — EP3BA3 Final Project</div>
+        </div>
+        <div class="project-sidebar-item">
+          <div class="project-sidebar-label">Accuracy</div>
+          <div class="project-sidebar-value">±1 cm over 10–100 cm range</div>
+        </div>
+        <div class="project-sidebar-item">
+          <div class="project-sidebar-label">Components</div>
+          <div class="project-sidebar-value">555 Timers, LM358 Op-Amps, LM311 Comparator, BCD Counters, 7-Segment Displays</div>
+        </div>
+        <div class="project-sidebar-item">
+          <div class="project-sidebar-label">Tools</div>
+          <div class="project-sidebar-value">Multisim, Oscilloscope, Breadboard Prototyping</div>
+        </div>
+        <div class="project-sidebar-item">
+          <div class="project-sidebar-label">Key Skills</div>
+          <div class="project-sidebar-value">Analog Circuit Design, Signal Amplification, Timing Logic, Schmitt Triggers, Oscilloscope Analysis</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">×</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<footer>
+  <div class="footer-left">© 2026 Hayden Thomas</div>
+  <div class="footer-right">
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#projects">Projects</a>
+    <a href="../index.html#experience">Experience</a>
+    <a href="../index.html#contact">Contact</a>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

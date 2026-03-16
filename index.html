@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hayden Thomas — Nuclear &amp; Mechanical Engineer</title>
+<meta name="description" content="Engineering Physics student at McMaster University specializing in nuclear, space systems, and nanotechnology. Building solutions from reactor beam ports to autonomous vehicles.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=2">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="index.html" class="nav-logo">H<span>.</span>T</a>
+  <ul class="nav-links-desktop">
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li>
+      <a href="assets/Hayden-Thomas-Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-resume-btn" download>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Resume
+      </a>
+    </li>
+  </ul>
+  <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile menu overlay — OUTSIDE nav to avoid backdrop-filter stacking -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <div class="mobile-menu-inner">
+    <a href="#about" class="mobile-menu-link">About</a>
+    <a href="#projects" class="mobile-menu-link">Projects</a>
+    <a href="#experience" class="mobile-menu-link">Experience</a>
+    <a href="#skills" class="mobile-menu-link">Skills</a>
+    <a href="#contact" class="mobile-menu-link">Contact</a>
+    <a href="assets/Hayden-Thomas-Resume.pdf" target="_blank" rel="noopener noreferrer" class="mobile-menu-resume" download>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download Resume
+    </a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-tag">Engineering Physics · McMaster University</div>
+      <h1 class="hero-name">
+        HAYDEN
+        <span class="last">THOMAS</span>
+      </h1>
+      <p class="hero-subtitle">
+        From <strong>reactor beam ports</strong> to <strong>autonomous vehicles</strong> — building solutions across nuclear, mechanical, and embedded systems.
+      </p>
+      <div class="hero-cta-group">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-outline">Get In Touch</a>
+        <a href="assets/Hayden-Thomas-Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-outline" download>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Resume
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-number">10.1</div>
+          <div class="hero-stat-label">GPA / 12</div>
+        </div>
+        <div>
+          <div class="hero-stat-number">8+</div>
+          <div class="hero-stat-label">Engineering Projects</div>
+        </div>
+        <div>
+          <div class="hero-stat-number">3</div>
+          <div class="hero-stat-label">Specializations</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-photo-frame">
+        <!-- Replace HT with: <img src="assets/hayden-photo.jpg" alt="Hayden Thomas"> -->
+        <div class="hero-photo-placeholder"><img src="assets/HAYDEN_THOMAS.PNG" alt="Hayden Thomas"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<div class="section-divider"></div>
+<section id="about">
+  <div class="section-header reveal">
+    <div class="section-label">01 — About</div>
+    <h2 class="section-title">Nuclear. Thermal. Embedded.<br>Where precision meets innovation.</h2>
+  </div>
+  <div class="about-grid">
+    <div class="reveal">
+      <div class="about-highlight-card">
+        <div class="about-highlight-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1.5"/><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/></svg></div>
+        <div class="about-highlight-title">Nuclear Focus</div>
+        <div class="about-highlight-text">Hands-on experience with gamma detection systems, neutron radiography, and material attenuation analysis at McMaster Nuclear Reactor.</div>
+      </div>
+      <div class="about-highlight-card">
+        <div class="about-highlight-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div>
+        <div class="about-highlight-title">Teaching Assistant</div>
+        <div class="about-highlight-text">TA for NUCLST 1N03 Nuclear Technology Applications — developing lectures on radiation detection, reactor fluid mechanics, and heat transfer.</div>
+      </div>
+      <div class="about-highlight-card">
+        <div class="about-highlight-icon"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></svg></div>
+        <div class="about-highlight-title">RoboSub Team</div>
+        <div class="about-highlight-text">Mechanical sub-team supporting CAD modeling and hardware integration for McMaster's autonomous underwater vehicle.</div>
+      </div>
+    </div>
+    <div class="about-text reveal">
+      <p>I'm a <strong>third-year Engineering Physics student at McMaster University</strong>, specializing in nuclear, space systems, and nanotechnology engineering. My passion for nuclear technology extends beyond the classroom — working directly with the McMaster Nuclear Reactor on gamma detection, neutron radiography, and material analysis.</p>
+      <p>My interdisciplinary foundation spans <strong>thermal systems design, fluid mechanics, CFD simulation, and embedded control systems</strong> — skills I've applied to projects ranging from nuclear thermal propulsion modeling to PID-controlled cooling systems.</p>
+      <p>I'm particularly drawn to the engineering challenges at the intersection of nuclear power, thermal-fluid systems, and advanced instrumentation. My long-term goal is to pursue <strong>graduate studies in nuclear or integrated systems engineering</strong>, building on the practical experience I gain through hands-on industry work.</p>
+      <div class="about-cards">
+        <div class="about-mini-card">
+          <div class="about-mini-card-title">Focus Areas</div>
+          <div class="about-mini-card-value">Nuclear · Space · Nano</div>
+        </div>
+        <div class="about-mini-card">
+          <div class="about-mini-card-title">University</div>
+          <div class="about-mini-card-value">McMaster — B.Eng</div>
+        </div>
+        <div class="about-mini-card">
+          <div class="about-mini-card-title">Program</div>
+          <div class="about-mini-card-value">Engineering Physics</div>
+        </div>
+        <div class="about-mini-card">
+          <div class="about-mini-card-title">Graduation</div>
+          <div class="about-mini-card-value">2028</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<div class="section-divider"></div>
+<section id="projects">
+  <div class="section-header reveal">
+    <div class="section-label">02 — Projects</div>
+    <h2 class="section-title">Engineering projects that combine<br>analysis with hardware integration.</h2>
+  </div>
+  <div class="projects-grid">
+
+    <!-- Featured Projects — separate cards -->
+    <a href="projects/surgical-autoclave.html" class="project-card project-card-featured reveal">
+      <div class="project-card-header">
+        <span class="project-number">Featured</span>
+      </div>
+      <h3 class="project-title">Automated Surgical Autoclave System</h3>
+      <div class="project-tags">
+        <span class="project-tag">Robotics</span>
+        <span class="project-tag">CAD</span>
+        <span class="project-tag">Automation</span>
+      </div>
+      <p class="project-desc">Designed and fabricated a custom sterilization container for automated surgical tool processing, integrating mechanical design with robotic automation using a 12-Arm system.</p>
+      <div class="project-featured-highlights">
+        <div class="project-featured-highlight">Optimized for clean flow, drainage, tool security, and spatial constraints</div>
+        <div class="project-featured-highlight">Final CAD model in Autodesk Fusion 360; G-code for 3D printing</div>
+        <div class="project-featured-highlight">Successfully demonstrated integrated automation with robotic arm</div>
+      </div>
+      <div class="project-card-link">View Project →</div>
+    </a>
+
+    <a href="projects/recycling-sorter.html" class="project-card project-card-featured reveal">
+      <div class="project-card-header">
+        <span class="project-number">Featured</span>
+      </div>
+      <h3 class="project-title">Autonomous Recycling Sorting System</h3>
+      <div class="project-tags">
+        <span class="project-tag">Robotics</span>
+        <span class="project-tag">Computer Vision</span>
+        <span class="project-tag">Controls</span>
+      </div>
+      <p class="project-desc">Programmed Q-Bot and Q-Arm robots to autonomously sort and deposit recyclable materials using integrated sensor systems and coordinated robotic control.</p>
+      <div class="project-featured-highlights">
+        <div class="project-featured-highlight">Line-following navigation with color and Hall-effect sensing</div>
+        <div class="project-featured-highlight">Differentiation between bin types using multi-sensor fusion</div>
+        <div class="project-featured-highlight">Pick-and-place sequencing for optimal material transfer</div>
+      </div>
+      <div class="project-card-link">View Project →</div>
+    </a>
+
+    <a href="projects/wind-turbine.html" class="project-card reveal">
+      <div class="project-card-header">
+        <span class="project-number">01</span>
+        <div class="project-tags"><span class="project-tag">CFD</span><span class="project-tag">FEA</span><span class="project-tag">Renewables</span></div>
+      </div>
+      <h3 class="project-title">Residential Wind Turbine Design</h3>
+      <p class="project-desc">Designed and optimized a compact turbine blade for rooftop installation in Calgary's high-wind environment. Conducted material selection using Granta databases and performed FEA stress simulations.</p>
+      <div class="project-card-link">View Project →</div>
+    </a>
+
+    <a href="projects/door-opener.html" class="project-card reveal">
+      <div class="project-card-header">
+        <span class="project-number">02</span>
+        <div class="project-tags"><span class="project-tag">Accessibility</span><span class="project-tag">3D Printing</span><span class="project-tag">CAD</span></div>
+      </div>
+      <h3 class="project-title">Telescoping Door Opener for Accessibility</h3>
+      <p class="project-desc">Designed and prototyped a telescoping door opener to help wheelchair users with multiple sclerosis independently open doors.</p>
+      <div class="project-card-link">View Project →</div>
+    </a>
+
+    <a href="projects/fsm-sequencer.html" class="project-card reveal">
+      <div class="project-card-header">
+        <span class="project-number">03</span>
+        <div class="project-tags"><span class="project-tag">Digital Logic</span><span class="project-tag">Electronics</span></div>
+      </div>
+      <h3 class="project-title">Finite State Machine — Student Number Sequencer</h3>
+      <p class="project-desc">Designed and implemented a finite state machine using digital logic gates and J-K flip-flops to cycle through a numeric sequence on a 7-segment display.</p>
+      <div class="project-card-link">View Project →</div>
+    </a>
+
+    <a href="projects/ultrasonic-sensor.html" class="project-card reveal">
+      <div class="project-card-header">
+        <span class="project-number">04</span>
+        <div class="project-tags"><span class="project-tag">Op-Amps</span><span class="project-tag">Signal Processing</span></div>
+      </div>
+      <h3 class="project-title">Analog to Digital Converter — Ultrasonic Distance Sensor</h3>
+      <p class="project-desc">Designed an ultrasonic distance measurement system converting time-of-flight analog signals into digital readings. Achieved accuracy within 1 cm over a 1-meter range.</p>
+      <div class="project-card-link">View Project →</div>
+    </a>
+
+    <a href="projects/msp430-embedded.html" class="project-card reveal">
+      <div class="project-card-header">
+        <span class="project-number">05</span>
+        <div class="project-tags"><span class="project-tag">Embedded C</span><span class="project-tag">MSP430</span><span class="project-tag">Real-Time</span></div>
+      </div>
+      <h3 class="project-title">MSP430 Embedded Systems Programming</h3>
+      <p class="project-desc">Programmed MSP430 microcontroller implementing GPIO control, timer modules, interrupt service routines, UART serial communication, and PWM signal generation.</p>
+      <div class="project-card-link">View Project →</div>
+    </a>
+
+    <a href="projects/nuclear-propulsion.html" class="project-card reveal">
+      <div class="project-card-header">
+        <span class="project-number">06</span>
+        <div class="project-tags"><span class="project-tag">Simulation</span><span class="project-tag">Nuclear</span><span class="project-tag">Ansys</span></div>
+      </div>
+      <h3 class="project-title">Nuclear Thermal Propulsion Simulation</h3>
+      <p class="project-desc">Modeled and analyzed nuclear-thermal rocket nozzle efficiency using CAD, 2D analytical methods, and Ansys Fluent for hydrogen propellant heating and flow development.</p>
+      <div class="project-card-link">View Project →</div>
+    </a>
+
+    <a href="projects/pid-cooling.html" class="project-card reveal">
+      <div class="project-card-header">
+        <span class="project-number">07</span>
+        <div class="project-tags"><span class="project-tag">PID</span><span class="project-tag">MSP430</span><span class="project-tag">MATLAB</span></div>
+      </div>
+      <h3 class="project-title">PID Controlled Cooling System</h3>
+      <p class="project-desc">Developed a PID temperature-control system using MSP430 microcontroller, embedded C, H-bridge polarity control, PWM, and MATLAB UART interface.</p>
+      <div class="project-card-link">View Project →</div>
+    </a>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<div class="section-divider"></div>
+<section id="experience">
+  <div class="section-header reveal">
+    <div class="section-label">03 — Experience</div>
+    <h2 class="section-title">Hands-on reactor work.<br>Real-world technical depth.</h2>
+  </div>
+  <div class="experience-timeline">
+    <div class="exp-item reveal">
+      <div class="exp-header">
+        <span class="exp-role">Nuclear Laboratory Experience</span>
+        <span class="exp-date">McMaster Nuclear Reactor</span>
+      </div>
+      <div class="exp-org">McMaster University — Hands-on Research</div>
+      <div class="exp-details">
+        <div class="exp-detail">Gamma detection and analysis with Geiger-Muller, scintillation, and semiconductor detectors</div>
+        <div class="exp-detail">Decay and half-life experiments using the McMaster Cyclotron</div>
+        <div class="exp-detail">Neutron material attenuation experiments using reactor beam ports</div>
+        <div class="exp-detail">Neutron radiography experiments to analyze the structure of various materials</div>
+      </div>
+    </div>
+    <div class="exp-item reveal">
+      <div class="exp-header">
+        <span class="exp-role">Teaching Assistant</span>
+        <span class="exp-date">2025 — 2026</span>
+      </div>
+      <div class="exp-org">NUCLST 1N03 · Nuclear Technology Applications · McMaster University</div>
+      <div class="exp-details">
+        <div class="exp-detail">Delivered in-person lectures and demos on radiation detection and reactor fluid mechanics</div>
+        <div class="exp-detail">Developed marking rubrics and graded assignments via Crowdmark</div>
+        <div class="exp-detail">Facilitated discussion on societal and policy implications of nuclear technology</div>
+      </div>
+    </div>
+    <div class="exp-item reveal">
+      <div class="exp-header">
+        <span class="exp-role">Fluid Mechanics &amp; Heat Transfer Lab</span>
+        <span class="exp-date">Lab Experience</span>
+      </div>
+      <div class="exp-org">McMaster University — Thermal-Fluid Systems</div>
+      <div class="exp-details">
+        <div class="exp-detail">Wind tunnel aerodynamic testing for lift/drag analysis, pipe flow, and friction characterization</div>
+        <div class="exp-detail">Venturi flow measurement and double-pipe heat exchanger performance evaluation</div>
+        <div class="exp-detail">CFD simulations in Ansys Fluent for thermofluidic systems analysis</div>
+      </div>
+    </div>
+    <div class="exp-item reveal">
+      <div class="exp-header">
+        <span class="exp-role">Mechanical Sub-Team</span>
+        <span class="exp-date">Current</span>
+      </div>
+      <div class="exp-org">McMaster RoboSub Autonomous Vehicle Team</div>
+      <div class="exp-details">
+        <div class="exp-detail">CAD modeling and hardware integration for autonomous underwater vehicle using SolidWorks</div>
+        <div class="exp-detail">Collaborating with electrical team for sensor, camera, and computing hardware mounting</div>
+        <div class="exp-detail">Managing cable routing within tight spatial constraints of subsea environments</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<div class="section-divider"></div>
+<section id="skills">
+  <div class="section-header reveal">
+    <div class="section-label">04 — Technical Skills</div>
+    <h2 class="section-title">Tools and technologies<br>across every layer of the stack.</h2>
+  </div>
+  <div class="skills-layout">
+    <div class="skill-group reveal"><div class="skill-group-title">Programming</div><div class="skill-items"><span class="skill-item">Python</span><span class="skill-item">C/C++</span><span class="skill-item">Embedded C</span><span class="skill-item">HTML</span><span class="skill-item">Verilog</span><span class="skill-item">VHDL</span></div></div>
+    <div class="skill-group reveal"><div class="skill-group-title">Software</div><div class="skill-items"><span class="skill-item">MATLAB</span><span class="skill-item">PSpice</span><span class="skill-item">Multisim</span><span class="skill-item">Inventor</span><span class="skill-item">Fusion 360</span><span class="skill-item">SolidWorks</span><span class="skill-item">FlexPDE</span></div></div>
+    <div class="skill-group reveal"><div class="skill-group-title">Hardware</div><div class="skill-items"><span class="skill-item">MSP430</span><span class="skill-item">Arduino</span><span class="skill-item">Raspberry Pi</span><span class="skill-item">FPGA</span><span class="skill-item">Sensors</span><span class="skill-item">Motors</span><span class="skill-item">Op-Amps</span><span class="skill-item">Oscilloscopes</span><span class="skill-item">Logic Analyzers</span></div></div>
+    <div class="skill-group reveal"><div class="skill-group-title">CAD &amp; Design</div><div class="skill-items"><span class="skill-item">SolidWorks</span><span class="skill-item">Inventor</span><span class="skill-item">Fusion 360</span><span class="skill-item">KiCAD</span><span class="skill-item">PCB Design</span><span class="skill-item">FDM 3D Printing</span></div></div>
+    <div class="skill-group reveal"><div class="skill-group-title">Simulation</div><div class="skill-items"><span class="skill-item">Ansys Fluent</span><span class="skill-item">Ansys Mechanical</span><span class="skill-item">COMSOL</span><span class="skill-item">SolidWorks Simulation</span><span class="skill-item">FEA</span><span class="skill-item">FEM</span></div></div>
+    <div class="skill-group reveal"><div class="skill-group-title">Systems &amp; Comms</div><div class="skill-items"><span class="skill-item">Linux</span><span class="skill-item">UART</span><span class="skill-item">PWM</span><span class="skill-item">Signal Processing</span><span class="skill-item">PC Assembly</span></div></div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<div class="section-divider"></div>
+<section id="education">
+  <div class="section-header reveal">
+    <div class="section-label">05 — Education</div>
+    <h2 class="section-title">Academic foundation.</h2>
+  </div>
+  <div class="education-card reveal">
+    <div class="education-badge">MU</div>
+    <div class="education-info">
+      <h3>McMaster University</h3>
+      <div class="education-program">Bachelor of Engineering — Major in Engineering Physics</div>
+      <div class="education-meta">
+        <div class="education-meta-item">Hamilton, ON · <strong>2022 — 2028</strong></div>
+        <div class="education-meta-item">GPA: <strong>10.1 / 12</strong></div>
+        <div class="education-meta-item">Focus: <strong>Nuclear · Space Systems · Nanotechnology</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<div class="section-divider"></div>
+<section id="testimonials">
+  <div class="section-header reveal">
+    <div class="section-label">06 — What People Say</div>
+    <h2 class="section-title">Feedback from collaborators.</h2>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal"><p class="testimonial-text">Hayden was incredibly professional and we will continue to collaborate in the future.</p><div class="testimonial-stars">★★★★★</div></div>
+    <div class="testimonial-card reveal"><p class="testimonial-text">Working with Hayden was fun, brilliant, and informative. He has such vast knowledge and experience.</p><div class="testimonial-stars">★★★★★</div></div>
+    <div class="testimonial-card reveal"><p class="testimonial-text">Thank you so much for absolutely kicking butt as always Hayden. Nothing but the best.</p><div class="testimonial-stars">★★★★★</div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="section-divider"></div>
+<section id="contact">
+  <div class="contact-layout">
+    <div class="contact-text reveal">
+      <div class="section-label">07 — Contact</div>
+      <h2>Let's build<br>something together.</h2>
+      <p>Whether you're looking for an engineering intern, have a project in mind, or just want to chat about nuclear technology — I'd love to hear from you.</p>
+    </div>
+    <div class="reveal">
+      <a href="mailto:thomas.haydena@gmail.com" class="contact-link-item"><div class="contact-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="contact-link-label">Email — Personal</div><div class="contact-link-value">thomas.haydena@gmail.com</div></div></a>
+      <a href="mailto:thomah10@mcmaster.ca" class="contact-link-item"><div class="contact-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.1 2.7 3 6 3s6-1.9 6-3v-5"/></svg></div><div><div class="contact-link-label">Email — University</div><div class="contact-link-value">thomah10@mcmaster.ca</div></div></a>
+      <a href="tel:2892307762" class="contact-link-item"><div class="contact-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div><div><div class="contact-link-label">Phone</div><div class="contact-link-value">289-230-7762</div></div></a>
+      <a href="https://www.linkedin.com/in/hayden-thomas-a27126273/" target="_blank" rel="noopener noreferrer" class="contact-link-item"><div class="contact-link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></div><div><div class="contact-link-label">LinkedIn</div><div class="contact-link-value">Connect with Hayden</div></div></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-left">© 2026 Hayden Thomas</div>
+  <div class="footer-right">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Telescoping Door Opener for Accessibility — Hayden Thomas</title>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta name="description" content="Designed and prototyped an assistive device for wheelchair users with multiple sclerosis, featuring telescoping reach, universal door compatibility, and 3D-printed components.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav id="nav">
+  <a href="../index.html" class="nav-logo">H<span>.</span>T</a>
+  <ul class="nav-links-desktop">
+    <li><a href="../index.html#about">About</a></li>
+    <li><a href="../index.html#projects">Projects</a></li>
+    <li><a href="../index.html#experience">Experience</a></li>
+    <li><a href="../index.html#skills">Skills</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+    <li><a href="../assets/Hayden-Thomas-Resume.pdf" class="nav-resume-btn" download>
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Resume
+    </a></li>
+  </ul>
+  <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <div class="mobile-menu-inner">
+    <a href="../index.html#about" class="mobile-menu-link">About</a>
+    <a href="../index.html#projects" class="mobile-menu-link">Projects</a>
+    <a href="../index.html#experience" class="mobile-menu-link">Experience</a>
+    <a href="../index.html#skills" class="mobile-menu-link">Skills</a>
+    <a href="../index.html#contact" class="mobile-menu-link">Contact</a>
+    <a href="../assets/Hayden-Thomas-Resume.pdf" class="mobile-menu-resume" download>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download Resume
+    </a>
+  </div>
+</div>
+
+<div class="project-hero">
+  <a href="../index.html#projects" class="project-hero-back">← Back to Projects</a>
+  <div class="project-hero-tags">
+    <span class="project-tag">Accessibility</span>
+    <span class="project-tag">3D Printing</span>
+    <span class="project-tag">CAD</span>
+    <span class="project-tag">User-Centered Design</span>
+  </div>
+  <h1 class="project-hero-title">Telescoping Door Opener<br>for Accessibility</h1>
+  <p class="project-hero-summary">Designed and prototyped an assistive device that enables wheelchair users with multiple sclerosis to independently open doors — featuring telescoping reach, a multi-grip mechanism for different door hardware, and 3D-printed components optimized for limited hand strength.</p>
+</div>
+
+<div class="section-divider"></div>
+
+<div class="project-detail-content">
+  <div class="project-detail-grid">
+    <div class="project-body">
+
+      <div class="project-gallery">
+        <div class="project-gallery-grid">
+          <div class="project-gallery-item" data-src="door_opener_hero.png" data-alt="Telescoping door opener prototype">
+            <img src="door_opener_hero.png" alt="Telescoping door opener prototype">
+          </div>
+          <div class="project-gallery-item" data-src="door_opener_grip.png" data-alt="Door grip mechanism detail">
+            <img src="door_opener_grip.png" alt="Door grip mechanism detail">
+          </div>
+          <div class="project-gallery-item" data-src="door_opener_cad.png" data-alt="CAD model of door opener">
+            <img src="door_opener_cad.png" alt="CAD model of door opener">
+          </div>
+        </div>
+      </div>
+
+      <h2>The Problem</h2>
+      <p>For wheelchair users with multiple sclerosis, something as routine as opening a door can be a significant barrier to independence. Reduced grip strength, limited reach from a seated position, and the variety of door hardware types (round knobs, lever handles, push bars) create a compounding accessibility challenge that existing assistive devices don't fully address.</p>
+
+      <h2>Design Requirements</h2>
+      <p>The device needed to satisfy several competing constraints:</p>
+      <ul>
+        <li>Extended reach to compensate for the seated position and arm reach limitations</li>
+        <li>Universal compatibility with round knobs, lever handles, and push/pull doors</li>
+        <li>Minimal grip force required — the user has limited hand and finger strength</li>
+        <li>Compact and portable when not in use for storage on a wheelchair</li>
+        <li>Durable enough for daily use across multiple door types</li>
+      </ul>
+
+      <h2>Concept Development</h2>
+      <p>The first iteration used a simple hook-and-pull concept, but user testing revealed it couldn't handle round knobs effectively. The design evolved through multiple iterations into a telescoping shaft with a dual-purpose end effector: claws that grip round doorknobs and a silicone-padded dome that provides friction for lever handles and flat surfaces.</p>
+      <p>The telescoping mechanism allows the device to extend for door operation and collapse for wheelchair-side storage. The handle was designed with an ergonomic profile that requires minimal grip force, using a larger diameter than conventional tools to distribute pressure across the palm.</p>
+
+      <h2>Prototyping &amp; Testing</h2>
+      <p>The grip mechanism and handle were prototyped using FDM 3D printing, allowing rapid iteration on the claw geometry and dome profile. CAD modelling was done in Autodesk Inventor with iterative refinements based on physical testing against different door hardware types. The silicone padding was added after testing showed that rigid plastic alone didn't provide enough friction on polished lever handles.</p>
+
+      <h2>Outcome</h2>
+      <p>The final prototype successfully operates across all target door types — round knobs, lever handles, and push/pull doors — while remaining compact enough for daily wheelchair use. The project demonstrated a full human-centered design process from user needs analysis through iterative prototyping to a functional assistive device.</p>
+
+    </div>
+
+    <div>
+      <div class="project-sidebar-card">
+        <div class="project-sidebar-title">Project Details</div>
+        <div class="project-sidebar-item">
+          <div class="project-sidebar-label">Context</div>
+          <div class="project-sidebar-value">McMaster University — Accessibility Design Project</div>
+        </div>
+        <div class="project-sidebar-item">
+          <div class="project-sidebar-label">End User</div>
+          <div class="project-sidebar-value">Wheelchair users with multiple sclerosis</div>
+        </div>
+        <div class="project-sidebar-item">
+          <div class="project-sidebar-label">Tools</div>
+          <div class="project-sidebar-value">Autodesk Inventor, FDM 3D Printing</div>
+        </div>
+        <div class="project-sidebar-item">
+          <div class="project-sidebar-label">Key Skills</div>
+          <div class="project-sidebar-value">User-Centered Design, CAD, Rapid Prototyping, Ergonomics, Iterative Testing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">×</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<footer>
+  <div class="footer-left">© 2026 Hayden Thomas</div>
+  <div class="footer-right">
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#projects">Projects</a>
+    <a href="../index.html#experience">Experience</a>
+    <a href="../index.html#contact">Contact</a>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

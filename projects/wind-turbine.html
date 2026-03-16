@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Residential Wind Turbine Design — Hayden Thomas</title>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta name="description" content="Designed and optimized a compact rooftop wind turbine blade for Calgary's high-wind environment using FEA, CFD, and material selection analysis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav id="nav">
+  <a href="../index.html" class="nav-logo">H<span>.</span>T</a>
+  <ul class="nav-links-desktop">
+    <li><a href="../index.html#about">About</a></li>
+    <li><a href="../index.html#projects">Projects</a></li>
+    <li><a href="../index.html#experience">Experience</a></li>
+    <li><a href="../index.html#skills">Skills</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+    <li><a href="../assets/Hayden-Thomas-Resume.pdf" class="nav-resume-btn" download>
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Resume
+    </a></li>
+  </ul>
+  <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <div class="mobile-menu-inner">
+    <a href="../index.html#about" class="mobile-menu-link">About</a>
+    <a href="../index.html#projects" class="mobile-menu-link">Projects</a>
+    <a href="../index.html#experience" class="mobile-menu-link">Experience</a>
+    <a href="../index.html#skills" class="mobile-menu-link">Skills</a>
+    <a href="../index.html#contact" class="mobile-menu-link">Contact</a>
+    <a href="../assets/Hayden-Thomas-Resume.pdf" class="mobile-menu-resume" download>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download Resume
+    </a>
+  </div>
+</div>
+
+<div class="project-hero">
+  <a href="../index.html#projects" class="project-hero-back">← Back to Projects</a>
+  <div class="project-hero-tags">
+    <span class="project-tag">CFD</span>
+    <span class="project-tag">FEA</span>
+    <span class="project-tag">Renewables</span>
+    <span class="project-tag">Material Selection</span>
+  </div>
+  <h1 class="project-hero-title">Residential Wind<br>Turbine Design</h1>
+  <p class="project-hero-summary">Designed and optimized a compact wind turbine blade for residential rooftop installation in Calgary's high-wind environment — combining aerodynamic analysis, FEA stress simulation, material selection, and manufacturing feasibility into a cost-effective renewable energy solution.</p>
+</div>
+
+<div class="section-divider"></div>
+
+<div class="project-detail-content">
+  <div class="project-detail-grid">
+    <div class="project-body">
+
+      <div class="project-gallery">
+        <div class="project-gallery-grid">
+          <div class="project-gallery-item" data-src="wind_turbine_hero.jpg" data-alt="Wind turbine blade design">
+            <img src="wind_turbine_hero.jpg" alt="Wind turbine blade design">
+          </div>
+          <div class="project-gallery-item" data-src="wind_turbine_fea.jpg" data-alt="FEA stress analysis results">
+            <img src="wind_turbine_fea.jpg" alt="FEA stress analysis results">
+          </div>
+          <div class="project-gallery-item" data-src="wind_turbine_cad.jpg" data-alt="CAD model of blade assembly">
+            <img src="wind_turbine_cad.jpg" alt="CAD model of blade assembly">
+          </div>
+        </div>
+      </div>
+
+      <h2>The Challenge</h2>
+      <p>Design a wind turbine blade optimized for residential rooftop installation in Calgary, Alberta — a location with strong, consistent winds but strict constraints on size, weight, noise, and structural durability. The blade had to balance aerodynamic efficiency with long-term reliability in a high-wind, high-variability environment.</p>
+
+      <h2>Design Approach</h2>
+      <p>The project began with research into current turbine technology, residential installation constraints, and the specific wind characteristics of Calgary. Key design factors included blade length (constrained by rooftop spatial limits), pitch angle (optimized for prevailing wind speeds), and structural integrity under sustained loading and gust conditions.</p>
+      <p>Several aerodynamic parameters were evaluated to maximize energy capture at residential scale, including blade chord length, the number of blades and their effect on rotor solidity, wind speed and its relationship to aerodynamic forces, air density effects, blade pitch angle for varying conditions, and rotor diameter within the available installation envelope.</p>
+
+      <h2>Material Selection</h2>
+      <p>Material selection was conducted using the Granta EduPack database, evaluating candidates against criteria including tensile strength, fatigue resistance, density, corrosion resistance, and manufacturability. A weighted decision matrix scored each material across these properties, with the final selection balancing structural performance against cost and availability for residential-scale production.</p>
+
+      <h2>Simulation &amp; Validation</h2>
+      <p>The blade design was validated through FEA stress simulations in Autodesk Inventor, analyzing deflection under rated wind loads and identifying stress concentrations at the root attachment. The simulations confirmed that the chosen material and geometry met deflection limits while maintaining adequate safety margins under both normal operating conditions and extreme gust scenarios.</p>
+
+      <h2>Outcome</h2>
+      <p>The final design is a compact, structurally validated turbine blade optimized for Calgary's wind profile, using materials selected through systematic engineering analysis. The project integrated aerodynamic design principles, computational analysis, and material science into a practical renewable energy solution for residential deployment.</p>
+
+    </div>
+
+    <div>
+      <div class="project-sidebar-card">
+        <div class="project-sidebar-title">Project Details</div>
+        <div class="project-sidebar-item">
+          <div class="project-sidebar-label">Context</div>
+          <div class="project-sidebar-value">McMaster University — Design Project</div>
+        </div>
+        <div class="project-sidebar-item">
+          <div class="project-sidebar-label">Location Target</div>
+          <div class="project-sidebar-value">Calgary, AB — Residential Rooftop</div>
+        </div>
+        <div class="project-sidebar-item">
+          <div class="project-sidebar-label">Tools</div>
+          <div class="project-sidebar-value">Autodesk Inventor, Granta EduPack</div>
+        </div>
+        <div class="project-sidebar-item">
+          <div class="project-sidebar-label">Analysis</div>
+          <div class="project-sidebar-value">FEA Stress Simulation, Weighted Decision Matrix, Aerodynamic Design</div>
+        </div>
+        <div class="project-sidebar-item">
+          <div class="project-sidebar-label">Key Skills</div>
+          <div class="project-sidebar-value">FEA, Material Selection, CAD, Aerodynamic Analysis, Design Optimization</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">×</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<footer>
+  <div class="footer-left">© 2026 Hayden Thomas</div>
+  <div class="footer-right">
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#projects">Projects</a>
+    <a href="../index.html#experience">Experience</a>
+    <a href="../index.html#contact">Contact</a>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>

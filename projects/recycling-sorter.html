@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autonomous Recycling Sorting System — Hayden Thomas</title>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta name="description" content="Autonomous recycling system using multi-sensor fusion, line-following algorithms, and coordinated robotic pick-and-place to sort materials by type.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="../index.html" class="nav-logo">H<span>.</span>T</a>
+  <ul class="nav-links-desktop">
+    <li><a href="../index.html#about">About</a></li>
+    <li><a href="../index.html#projects">Projects</a></li>
+    <li><a href="../index.html#experience">Experience</a></li>
+    <li><a href="../index.html#skills">Skills</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+    <li>
+      <a href="../assets/Hayden-Thomas-Resume.pdf" class="nav-resume-btn" download>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Resume
+      </a>
+    </li>
+  </ul>
+  <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <div class="mobile-menu-inner">
+    <a href="../index.html#about" class="mobile-menu-link">About</a>
+    <a href="../index.html#projects" class="mobile-menu-link">Projects</a>
+    <a href="../index.html#experience" class="mobile-menu-link">Experience</a>
+    <a href="../index.html#skills" class="mobile-menu-link">Skills</a>
+    <a href="../index.html#contact" class="mobile-menu-link">Contact</a>
+    <a href="../assets/Hayden-Thomas-Resume.pdf" class="mobile-menu-resume" download>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download Resume
+    </a>
+  </div>
+</div>
+
+<!-- PROJECT HERO -->
+<div class="project-hero">
+  <a href="../index.html#projects" class="project-hero-back">← Back to Projects</a>
+  <div class="project-hero-tags">
+    <span class="project-tag">Robotics</span>
+    <span class="project-tag">Sensor Fusion</span>
+    <span class="project-tag">Python</span>
+    <span class="project-tag">Controls</span>
+  </div>
+  <h1 class="project-hero-title">Autonomous Recycling<br>Sorting System</h1>
+  <p class="project-hero-summary">Built a multi-robot sorting system that autonomously identifies, picks, transports, and deposits recyclable materials into the correct bins — combining line-following algorithms, multi-sensor fusion, and coordinated pick-and-place control, all programmed from scratch in Python.</p>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- PROJECT CONTENT -->
+<div class="project-detail-content">
+  <div class="project-detail-grid">
+
+    <!-- Main content -->
+    <div class="project-body">
+
+      <!-- HERO GALLERY -->
+      <div class="project-gallery">
+        <div class="project-gallery-grid">
+          <div class="project-gallery-item" data-src="simulated-environment.png" data-alt="Full sorting system with Q-Bot, track, and recycling bins">
+            <img src="simulated-environment.png" alt="Full sorting system with Q-Bot, track, and recycling bins">
+          </div>
+          <div class="project-gallery-item" data-src="q-bot.png" data-alt="Quanser Q-Bot mobile robot">
+            <img src="q-bot.png" alt="Quanser Q-Bot mobile robot">
+          </div>
+          <div class="project-gallery-item" data-src="q-arm.png" data-alt="Quanser Q-Arm robotic manipulator">
+            <img src="q-arm-thumb.png" alt="Quanser Q-Arm robotic manipulator">
+          </div>
+        </div>
+      </div>
+
+      <h2>The Challenge</h2>
+      <p>Design a fully autonomous system to sort recyclable materials by type without human intervention. Two robots needed to work in coordination: a Q-Arm to pick materials from a dispenser and load them onto a mobile Q-Bot, and the Q-Bot to navigate a track, identify the correct bin, deposit the materials, and return for the next cycle.</p>
+
+      <h2>Solving the Sensor Problem</h2>
+      <p>The core technical challenge was reliable bin identification. The track used color-coded markers at each bin location — red, green, blue, and black — but a single color sensor couldn't reliably distinguish between the black navigation line and the dark bin markers. Overlapping reading ranges across colors made single-sensor classification unreliable.</p>
+      <p>The solution was a dual-sensor architecture: a dedicated color sensor for line tracking paired with a Hall-effect sensor to detect magnetic markers embedded at bin positions. This fusion approach let the Q-Bot cleanly separate navigation from classification, producing repeatable bin identification across all four material categories.</p>
+
+      <!-- SENSOR PHOTOS -->
+      <div class="project-gallery">
+        <div class="project-gallery-grid">
+          <div class="project-gallery-item" data-src="dfrobot-color-sensor-1.png" data-alt="DIYobot color sensor for bin identification">
+            <img src="dfrobot-color-sensor-1.png" alt="DIYobot color sensor for bin identification">
+          </div>
+          <div class="project-gallery-item" data-src="dfrobot-color-sensor-2.png" data-alt="Effector-mounted color sensor for line tracking">
+            <img src="dfrobot-color-sensor-2-thumb.png" alt="Effector-mounted color sensor for line tracking">
+          </div>
+        </div>
+      </div>
+
+      <h2>Software Architecture</h2>
+      <p>The entire control system was written from scratch in Python with a three-layer architecture:</p>
+      <ul>
+        <li>Line-following controller with continuous sensor feedback to keep the Q-Bot on the navigation path</li>
+        <li>Bin detection logic fusing color readings with Hall-effect triggers to classify bin type and determine stop position</li>
+        <li>Q-Arm coordination with pick-and-place sequencing synchronized to the Q-Bot's transport cycle</li>
+      </ul>
+      <p>Development started with pseudo-code mapping the full workflow before implementation, making it easier to visualize state transitions and catch logic errors early.</p>
+
+      <h2>Simulation-First Approach</h2>
+      <p>All code was developed and validated in Quanser Interactive Labs before touching physical hardware. The simulated environment enabled rapid iteration on sensor thresholds, timing parameters, and error recovery — catching issues like color sensor angle sensitivity and line-tracking edge cases without risking the robots.</p>
+
+      <!-- SIMULATION PHOTO -->
+      <div class="project-gallery">
+        <div class="project-gallery-grid">
+          <div class="project-gallery-item" data-src="simulated-environment.png" data-alt="Quanser Interactive Labs simulated environment">
+            <img src="simulated-environment.png" alt="Quanser Interactive Labs simulated environment">
+          </div>
+        </div>
+      </div>
+
+      <h2>Key Debugging Challenges</h2>
+      <p>Several issues surfaced during simulation that required systematic debugging:</p>
+      <ul>
+        <li>The Q-Bot lost tracking at tight curves — resolved by tuning the color sensor threshold and adjusting the control loop response</li>
+        <li>Color sensor readings drifted with the simulated lighting angle — fixed by recalibrating sensor thresholds to account for angular variation</li>
+        <li>Timing conflicts between line-following and bin-detection triggered false stops — resolved by restructuring the state machine to separate navigation states from detection states</li>
+      </ul>
+
+      <h2>Outcome</h2>
+      <p>The completed system autonomously sorted all recyclable material types into the correct bins with reliable accuracy. From a blank Python file to a working multi-robot coordination system, the project demonstrated end-to-end integration of sensor fusion, autonomous navigation, and robotic control.</p>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div>
+      <div class="project-sidebar-card">
+        <div class="project-sidebar-title">Project Details</div>
+        <div class="project-sidebar-item">
+          <div class="project-sidebar-label">Context</div>
+          <div class="project-sidebar-value">McMaster University — Engineering Design Project</div>
+        </div>
+        <div class="project-sidebar-item">
+          <div class="project-sidebar-label">Role</div>
+          <div class="project-sidebar-value">Lead Programmer — Q-Bot &amp; Q-Arm</div>
+        </div>
+        <div class="project-sidebar-item">
+          <div class="project-sidebar-label">Language</div>
+          <div class="project-sidebar-value">Python (from scratch)</div>
+        </div>
+        <div class="project-sidebar-item">
+          <div class="project-sidebar-label">Platform</div>
+          <div class="project-sidebar-value">Quanser Interactive Labs, Q-Bot, Q-Arm</div>
+        </div>
+        <div class="project-sidebar-item">
+          <div class="project-sidebar-label">Sensors</div>
+          <div class="project-sidebar-value">Color Sensor (×2), Hall-Effect Sensor</div>
+        </div>
+        <div class="project-sidebar-item">
+          <div class="project-sidebar-label">Key Skills</div>
+          <div class="project-sidebar-value">Sensor Fusion, Line-Following Algorithms, Robotic Coordination, FSM Design, Debugging</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">×</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<footer>
+  <div class="footer-left">© 2026 Hayden Thomas</div>
+  <div class="footer-right">
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#projects">Projects</a>
+    <a href="../index.html#experience">Experience</a>
+    <a href="../index.html#contact">Contact</a>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

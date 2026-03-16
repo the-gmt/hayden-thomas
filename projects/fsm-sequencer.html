@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finite State Machine — Student Number Sequencer — Hayden Thomas</title>
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<meta name="description" content="Designed and synthesized a finite state machine using J-K flip-flops, Boolean algebra, and Karnaugh mapping to drive a 7-segment display through a numeric sequence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav id="nav">
+  <a href="../index.html" class="nav-logo">H<span>.</span>T</a>
+  <ul class="nav-links-desktop">
+    <li><a href="../index.html#about">About</a></li>
+    <li><a href="../index.html#projects">Projects</a></li>
+    <li><a href="../index.html#experience">Experience</a></li>
+    <li><a href="../index.html#skills">Skills</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+    <li><a href="../assets/Hayden-Thomas-Resume.pdf" class="nav-resume-btn" download>
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Resume
+    </a></li>
+  </ul>
+  <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <div class="mobile-menu-inner">
+    <a href="../index.html#about" class="mobile-menu-link">About</a>
+    <a href="../index.html#projects" class="mobile-menu-link">Projects</a>
+    <a href="../index.html#experience" class="mobile-menu-link">Experience</a>
+    <a href="../index.html#skills" class="mobile-menu-link">Skills</a>
+    <a href="../index.html#contact" class="mobile-menu-link">Contact</a>
+    <a href="../assets/Hayden-Thomas-Resume.pdf" class="mobile-menu-resume" download>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download Resume
+    </a>
+  </div>
+</div>
+
+<div class="project-hero">
+  <a href="../index.html#projects" class="project-hero-back">← Back to Projects</a>
+  <div class="project-hero-tags">
+    <span class="project-tag">Digital Logic</span>
+    <span class="project-tag">Sequential Circuits</span>
+    <span class="project-tag">Boolean Algebra</span>
+    <span class="project-tag">Multisim</span>
+  </div>
+  <h1 class="project-hero-title">Finite State Machine<br>Student Number Sequencer</h1>
+  <p class="project-hero-summary">Designed a sequential logic circuit from scratch — deriving state transition tables, synthesizing Boolean expressions via Karnaugh maps, and implementing the circuit with six J-K flip-flops and combinational logic to cycle a 7-segment display through a 9-digit numeric sequence.</p>
+</div>
+
+<div class="section-divider"></div>
+
+<div class="project-detail-content">
+  <div class="project-detail-grid">
+    <div class="project-body">
+
+      <div class="project-gallery">
+        <div class="project-gallery-grid">
+          <div class="project-gallery-item" data-src="fsm_circuit.png" data-alt="Multisim circuit schematic">
+            <img src="fsm_circuit.png" alt="Multisim circuit schematic">
+          </div>
+          <div class="project-gallery-item" data-src="fsm_timing.png" data-alt="Logic analyzer timing diagram">
+            <img src="fsm_timing.png" alt="Logic analyzer timing diagram">
+          </div>
+        </div>
+      </div>
+
+      <h2>The Problem</h2>
+      <p>Design a sequential logic circuit that cycles a 7-segment display through a specific 9-digit numeric sequence. The inputs to the display decoder must be driven entirely by flip-flop outputs from a custom-designed finite state machine — no microcontroller, no programmable logic, just discrete gates and flip-flops.</p>
+
+      <h2>State Machine Design</h2>
+      <p>The design started with a state transition table mapping each digit in the sequence to a unique binary state across six bits (Q0–Q5). Four bits encode the BCD value for the display, and two auxiliary bits resolve states where the same digit appears multiple times in the sequence. From this table, a full excitation table was derived for the J and K inputs of each J-K flip-flop across all nine states.</p>
+
+      <h2>Logic Minimization</h2>
+      <p>Karnaugh maps were constructed for all twelve inputs (J and K for each of the six flip-flops) to extract minimized sum-of-products Boolean expressions. Several simplifications emerged from the analysis: two inputs shared identical logic and could use a single gate, two K inputs were constant zero (tied to ground), and two J inputs depended directly on a single flip-flop output with no combinational logic required.</p>
+      <p>Both sum-of-products and product-of-sums forms were evaluated. SOP consistently required fewer gates for this particular state sequence, so it was used for the final implementation. An alternate circuit design was also explored using don't-care conditions on the auxiliary bits, requiring one additional gate but providing more robust handling of undefined states.</p>
+
+      <h2>Implementation</h2>
+      <p>The circuit was built in Multisim using 74HC109 J-K flip-flops, 7408 AND gates, 74HC32 OR gates, a 74HC04 NOT gate, a 4511 BCD-to-7-segment decoder, and a 1 Hz clock source. Each wire in the schematic follows a color code tied to its source flip-flop for traceability. The timing diagram was verified using Multisim's logic analyzer, confirming the correct state sequence across all nine transitions.</p>
+
+      <h2>Outcome</h2>
+      <p>The completed circuit correctly cycles through all nine digits of the target sequence on the 7-segment display, driven by a fully custom FSM with minimized combinational logic. The project demonstrates the complete digital design flow: state table derivation, excitation table construction, Karnaugh map minimization, Boolean expression synthesis, circuit implementation, and timing verification.</p>
+
+    </div>
+
+    <div>
+      <div class="project-sidebar-card">
+        <div class="project-sidebar-title">Project Details</div>
+        <div class="project-sidebar-item">
+          <div class="project-sidebar-label">Context</div>
+          <div class="project-sidebar-value">McMaster University — ENGPHYS 2E04 Design Project</div>
+        </div>
+        <div class="project-sidebar-item">
+          <div class="project-sidebar-label">Circuit</div>
+          <div class="project-sidebar-value">6× J-K Flip-Flops, AND/OR/NOT gates, 4511 BCD Decoder, 7-Segment Display</div>
+        </div>
+        <div class="project-sidebar-item">
+          <div class="project-sidebar-label">Tools</div>
+          <div class="project-sidebar-value">Multisim, Logic Analyzer</div>
+        </div>
+        <div class="project-sidebar-item">
+          <div class="project-sidebar-label">Key Skills</div>
+          <div class="project-sidebar-value">FSM Design, Karnaugh Maps, Boolean Minimization, Sequential Logic, Timing Verification</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">×</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<footer>
+  <div class="footer-left">© 2026 Hayden Thomas</div>
+  <div class="footer-right">
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#projects">Projects</a>
+    <a href="../index.html#experience">Experience</a>
+    <a href="../index.html#contact">Contact</a>
+  </div>
+</footer>
+<script src="../js/main.js"></script>
+</body>
+</html>
